@@ -1,0 +1,27 @@
+*{
+    margin:0px;
+  
+}
+header{
+    background-color:rgb(17, 155, 223);
+    
+}
+.ol{
+    display:flex;
+    justify-content:space-around;
+    list-style-type:none;
+    flex-direction:row;
+    padding:10px;
+}
+.li{
+    text-decoration:none;
+    color:white;  
+    padding:2px;
+} 
+
+.li:hover{
+    background-color:pink;
+    color:black;
+    
+    
+}
