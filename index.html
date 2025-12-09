@@ -1,0 +1,155 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+      <!-- <p id ="msg"></p>
+        <p id = "item">Welcome</p>
+        <p id = "item">to JavaScript</p>
+        <button id ="submit">click Me</button> 
+        <ul id="list"></ul>
+        <button id = "submit" onclick="submitted()">click Me</button>
+   <p id = "name"></p>
+    <input type="text" id="inp" placeholder="Enter your name">
+    <button id = "submit" onclick="submitted()">Submit</button>
+    <p id = "num">Increment</p>
+    <button id="inc">Increment</button>
+    <button id="dec">Decrement</button>
+    <button id="restart">Reset</button>
+    <h1>ROCK PAPER SCISSOR</h1>
+    <button onclick ="getResult('Rock')">Rock</button>
+    <button onclick = "getResult('Paper')">Paper</button>
+    <button onclick = "getResult('Scissor')">Scissor</button>
+    <p id="result"></p>
+    <form class="form" id="myForm">
+    <label>Name:</label><br>
+    <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+    <label>Email:</label><br>
+    <input type="email" id="email" placeholder="Enter your email" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" placeholder="Enter your password" required><br><br>
+
+    <label>Gender:</label><br>
+    <input type="radio" name="gender" value="Male"> Male
+    <input type="radio" name="gender" value="Female"> Female<br><br>
+
+    <button type="submit" id="submit">Submit</button>
+    <button type="reset" id="resetBtn">Reset</button>
+
+</form>
+<p id ="msg">Hello</p>
+<form id="myform">
+    <label for ="email">Email:</label>
+    <input type ="email" id ="email" placeholder="Enter the Password">
+    <label for ="Passwerd">Password:</label>
+    <input type ="password" id="password" placeholder="Enter the password">
+    <button type ="submit" id ="btn">submit</button>
+</form>
+<p id ="status"></p>
+<p id="title">Hello World!!!!</p>
+<button id="toggle" onclick="buttonClicked()">toggle</button>-->
+    <p id="title">Hello World!!!!</p>
+    <button id="toggle" onclick="toggle()">toggle</button>
+
+
+
+
+
+    <script>
+          /* document.getElementById("msg").style.color = "blue";
+            document.getElementById("item");
+            item[0].style.color = "green";
+            document.querySelectorAll('#msg')[0].style.backgroundColor = "yellow"
+            document.querySelectorAll('.list').style.backgroundColor = "pink"
+            document.querySelectorAll('p')[1].style.backgroundColor = "orange"//tag
+            document.getElementById("msg").innerText = "Hello World!";
+            document.getElementById("msg").innerHTML = "<b>Hello World!</b>";
+            document.getElementById("submit").addEventListener("click",()=>{
+              document.getElementById("msg").innerText = "Button Clicked!";
+            })
+            var li=document.createElement("li");
+            li.innerText = "Item 1";
+            document.getElementById("list").appendChild(li);
+            var submitted = () =>{
+                alert("Button Clicked!");
+            }
+            document.getElementById("submit").addEventListener("click",()=>{
+            var name = document.getElementById("inp").value;
+            document.getElementById("name").innerText = "Hello, " + name + "!";
+        });
+        var count = 0;
+        document.getElementById("inc").addEventListener("click",()=>{
+            count++;
+            document.getElementById("num").innerText = count;
+        });
+        document.getElementById("dec").addEventListener("click",()=>{
+            count--;
+            document.getElementById("num").innerText = count;
+        });
+        document.getElementById("restart").addEventListener("click",()=>{
+            count=0;
+            document.getElementById("num").innerText = count;
+        });
+        const getResult =(userchoice)=>{
+            var choice =["Rock","Paper","Scissor"];
+            var computerchoice = choice[Math.floor(Math.random()*3)];
+            console.log("Computer choice: " + computerchoice);
+            var result = "";
+            if(userchoice === computerchoice) {
+                result = "It's a Tie!";
+            } else if(
+                (userchoice === "Rock" && computerchoice === "Paper") ||
+                (userchoice === "Paper" && computerchoice === "Scissor") ||
+                (userchoice === "Scissor" && computerchoice === "Rock")
+            ) {
+                result = "loss!";
+            } else {
+                result = "wins!!";
+            }
+              document.getElementById("result").innerText=result
+        }
+        document.getElementById("submit").addEventListener("click", function (e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+
+        const gender = document.querySelector('input[name="gender"]:checked');
+        const genderValue = gender ? gender.value : "Not selected";
+
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Password:", password);
+        console.log("Gender:", genderValue);
+        });
+        document.getElementById("resetBtn").addEventListener("click", function () {
+            console.clear();
+            console.log("Form and console reset ");
+        });
+        document.getElementById('mag').remove();
+        var status='';
+        document.getElementById('myform').addEventListener('submit',(e)=>{
+            e.preventDefault();
+            const email =document.getElementById("email").values;
+            const password = document.getElementById("Password")
+        })
+        var buttonClicked=()=>{
+        var title=document.getElementById('title')
+        var result =title.innerText==="Hello World"?"Hello Dharani":"Hello World!!"
+        title.innerText=result;
+        }*/
+        var toggle =()=>{
+            var color= ['red','green', 'orange','yellow','white','black','blue','pink','violet','brown',];
+            var index =Math.floor(Math.random()*color.length);
+            document.querySelector('body').style.backgroundColor=color[index];
+        }
+        </script>
+    </body>
+    </html>
