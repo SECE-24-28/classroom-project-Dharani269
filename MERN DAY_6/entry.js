@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors())
 
 mdb
-  .connect("mongodb://localhost:27017/seceDec2025")
+  .connect("mongodb://localhost:27017/MERN")
   .then(() => console.log("MongoDB Connection Successful"))
   .catch((err) => console.log("MongoDB Connection Unsuccessful", err));
 
@@ -98,4 +98,5 @@ app.get("/static", (req, res) => {
 
 app.listen(PORT, () => {
   console.log(`Server Started Successfully in the port ${PORT}`);
+
 });
