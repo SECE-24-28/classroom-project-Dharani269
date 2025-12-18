@@ -5,11 +5,13 @@ const PORT=8001;
 
 // Middleware to parse JSON
 app.use(express.json());
-mdb.connect('mongodb://localhost:27017/MERNh').then(()=>{
-    console.log("Mongodb connection successfull")
-}).catch((err)=>{
-    console.log("Mongodb connection unsuccessful",err)
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
 })
+.then(() => console.log("MongoDB Connection Successful"))
+.catch((err) => console.log("MongoDB Connection Unsuccessful", err));
+
 app.get('/',(req,res)=>{
     res.send("Welcome to backend server")
 })

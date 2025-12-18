@@ -14,13 +14,20 @@ const PORT = process.env.PORT || 8001;
 app.use(express.json());
 app.use(cors());
 
+<<<<<<< HEAD
 // MongoDB connection
+=======
+>>>>>>> 25693dc (Fix MongoDB Atlas connection for Render)
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
 .then(() => console.log("MongoDB Connection Successful"))
 .catch((err) => console.log("MongoDB Connection Unsuccessful", err));
+<<<<<<< HEAD
+=======
+
+>>>>>>> 25693dc (Fix MongoDB Atlas connection for Render)
 
 
 // Routes
