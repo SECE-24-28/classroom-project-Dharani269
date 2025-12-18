@@ -15,13 +15,13 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB connection
-mongoose
-  .connect(process.env.MONGO_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
-  .then(() => console.log("MongoDB Connection Successful"))
-  .catch((err) => console.log("MongoDB Connection Unsuccessful", err));
+mongoose.connect(process.env.MONGO_URL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => console.log("MongoDB Connection Successful"))
+.catch((err) => console.log("MongoDB Connection Unsuccessful", err));
+
 
 // Routes
 app.get("/", (req, res) => {
