@@ -1,19 +1,17 @@
 const express = require('express');
-const mongoose = require('mongoose'); // fixed from "mdb" to "mongoose"
-const path = require('path'); // for serving static files
+const mongoose = require('mongoose');
+const path = require('path');
+
 const app = express();
 const PORT = process.env.PORT || 8001;
 
-// Middleware to parse JSON
+// Middleware
 app.use(express.json());
 
-// MongoDB connection
-mongoose.connect(process.env.MONGO_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log("MongoDB Connection Successful"))
-.catch((err) => console.log("MongoDB Connection Unsuccessful", err));
+// MongoDB connection (FIXED)
+mongoose.connect(process.env.MONGO_URL)
+  .then(() => console.log("MongoDB Connection Successful"))
+  .catch((err) => console.log("MongoDB Connection Unsuccessful", err));
 
 // Routes
 app.get('/', (req, res) => {
@@ -22,31 +20,30 @@ app.get('/', (req, res) => {
 
 app.get('/json', (req, res) => {
   res.json({
-    "college": "sece",
-    "Dept": "Cys",
-    "StuCount": "64"
+    college: "sece",
+    Dept: "Cys",
+    StuCount: "64"
   });
 });
 
-// Serve static file
+// Static file
 app.get('/static', (req, res) => {
-  res.sendFile(path.join(__dirname, "Index.html")); // fixed path syntax
+  res.sendFile(path.join(__dirname, "Index.html"));
 });
 
-// Signup GET route
+// Signup routes
 app.get('/signup', (req, res) => {
-  res.send("Signup page - Use POST method to submit signup data");
+  res.send("Signup page - Use POST method");
 });
 
-// Signup POST route
 app.post('/signup', (req, res) => {
   const { email, username, password } = req.body;
-  console.log('Received signup data:', { email, username, password });
+  console.log("Signup data:", email, username, password);
 
-  // Here you can add MongoDB save logic later
   res.json({
-    "Message": "Signup successful",
-    "data": { email, username }
+    message: "Signup successful",
+    email,
+    username
   });
 });
 
