@@ -1,10 +1,13 @@
 const express = require('express');
-const mdb=require('mongoose');
-const app=express();
-const PORT=8001;
+const mongoose = require('mongoose'); // fixed from "mdb" to "mongoose"
+const path = require('path'); // for serving static files
+const app = express();
+const PORT = process.env.PORT || 8001;
 
 // Middleware to parse JSON
 app.use(express.json());
+
+// MongoDB connection
 mongoose.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
@@ -12,30 +15,42 @@ mongoose.connect(process.env.MONGO_URL, {
 .then(() => console.log("MongoDB Connection Successful"))
 .catch((err) => console.log("MongoDB Connection Unsuccessful", err));
 
-app.get('/',(req,res)=>{
-    res.send("Welcome to backend server")
-})
-app.get('/json',(req,res)=>{
-    res.json({
-     "college":"sece",
-     "Dept":"Cys",
-     "StuCount":"64"
-    })  
-})
-app.get('/static',(req,res)=>{
-   res.sendFile('"C:\Users\dhara\OneDrive\Desktop\MERN DAY_7\seceBackend2025Dec\Index.html"')
-    })
+// Routes
+app.get('/', (req, res) => {
+  res.send("Welcome to backend server");
+});
 
-app.get('/signup',(req, res)=>{
-    res.send("Signup page - Use POST method to submit signup data")
-})
+app.get('/json', (req, res) => {
+  res.json({
+    "college": "sece",
+    "Dept": "Cys",
+    "StuCount": "64"
+  });
+});
 
-app.post('/signup',(req, res)=>{
-    const{email,username,password} = req.body;
-    console.log('Received signup data:', {email, username, password});
-    res.json({"Message":"Signup successful", "data": {email, username}})
-})
+// Serve static file
+app.get('/static', (req, res) => {
+  res.sendFile(path.join(__dirname, "Index.html")); // fixed path syntax
+});
 
-app.listen(PORT,()=>{
-    console.log('Server is running on port ${PORT}')
-})
+// Signup GET route
+app.get('/signup', (req, res) => {
+  res.send("Signup page - Use POST method to submit signup data");
+});
+
+// Signup POST route
+app.post('/signup', (req, res) => {
+  const { email, username, password } = req.body;
+  console.log('Received signup data:', { email, username, password });
+
+  // Here you can add MongoDB save logic later
+  res.json({
+    "Message": "Signup successful",
+    "data": { email, username }
+  });
+});
+
+// Start server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
