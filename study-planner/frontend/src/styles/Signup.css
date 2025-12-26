@@ -1,0 +1,32 @@
+.signup-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.signup-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.signup-btn {
+  width: 100%;
+  background-color: #28a745;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.signup-btn:hover {
+  background-color: #218838;
+}
+
+.signup-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}

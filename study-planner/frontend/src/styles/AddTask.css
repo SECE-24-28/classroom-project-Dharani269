@@ -1,0 +1,39 @@
+.add-task-container {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.add-task-title {
+  margin-bottom: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.form-col {
+  flex: 1;
+}
+
+.add-task-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-task-btn:hover {
+  background-color: #0056b3;
+}
+
+.add-task-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}

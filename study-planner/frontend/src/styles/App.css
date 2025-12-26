@@ -1,0 +1,52 @@
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 20px;
+}
+
+.header-content {
+  text-align: center;
+  flex: 1;
+}
+
+.app-title {
+  color: #007bff;
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+.welcome-text {
+  color: #666;
+  margin: 10px 0 0 0;
+}
+
+.logout-btn {
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+.app-footer {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  color: #666;
+}
