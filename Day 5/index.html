@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <!--- <div id="msg"></div> -->
+
+   <!---- <p class="item">One</p>
+    <p class="item">Two</p> -->
+
+    <!--<p id="msg"></p>
+    <button id="Submit">Show Message</button> -->
+   <!--<ul id ="List"></ul> -->
+
+   <!--<button id="submit" onclick="submitted()">click</button> -->
+
+     <!--<p id="name"></p>
+     <input type="text" id="inp" placeholder="Enter the name : ">
+     <button id="submit">submit</button>-->
+
+     <!--<p id="num">0</p>
+     <button id="inc">Increment</button>
+     <button id="dec">Decrement</button>
+     <button id="reset">Reset</button> -->
+
+     <!--<h1>Rock Paper Scissor</h1>
+     <button onclick="getResult('rock')">Rock</button>
+     <button onclick="getResult('paper')">Paper</button>
+     <button onclick="getResult('scissor')">Scissor</button>
+     <p id="result"></p>-->
+
+<!--  <h2>Forms</h2>
+    <form id="myForm">
+    <label>Name:</label>
+    <input type="text" id="name" required><br><br>
+    <label>Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <button type="submit">Submit</button>
+</form>-->
+<!--<p id="title">Hello World!!</p>
+<button id="toggle" onclick="toggle()">toggle</button>-->
+
+<!-- Paragraph for size increase -->
+<p id="para">This is a sample paragraph. Click the button to increase my size.</p>
+
+<button id="toggle" onclick="increaseSize()">Increase Size</button>
+<button id="toggle" onclick="decreaseSize()">Decrease Size</button>
+<button id="" onclick="resetSize()">Reset</button>
+<script>
+
+  var size = 16; 
+
+    var increaseSize = () => {
+        size += 2;  
+        document.getElementById("para").style.fontSize = size + "px";
+    }
+    var decreaseSize = () => {
+        size -= 2;  
+        document.getElementById("para").style.fontSize = size + "px";       
+    };
+
+    var resetSize = () => {
+        size = 16;  
+        document.getElementById("para").style.fontSize = size + "px";       
+    };
+/*
+  var toggle = () =>{
+  var color = ["red","Blue","Green","Orange","yellow"];
+  var index = Math.floor(Math.random()*color.length);
+  document.querySelector('body').style.backgroundColor=color[index];
+  }
+  */
+  /*
+  var buttonclicked=()=>{
+ var title=document.getElementById('title');
+ var result = title.innerText==="Hello World!!"?"Hello Dharani" : "Hello World";
+ title.innerText = result;
+}
+*/
+
+  /*
+var toggle = () =>{
+  var color = ["red","Blue","Green","Orange","yellow"];
+  var ind = Math.floor(Math.random()*color.length);
+  document.querySelector('body').style.backgroundColor=color[ind];
+}
+*/
+
+  /*
+    //Froms
+    document.getElementById('myForm').addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+
+        console.log('Name: ${name}');
+        console.log('Email: ${email}');
+
+        alert("Form submitted successfully");
+    });
+    */
+        /*
+        //ROCK PAPER SCISSOR
+        const getResult = (userChoice) =>{
+            var choice = ['rock','paper','scissor'];
+            var computerChoice = choice[Math.floor(Math.random()*3)];
+            console.log(computerChoice);
+            var result="";
+            if(userChoice===computerChoice) result = "Draw😊"
+            else if((userChoice==="rock" && computerChoice==='paper')|| (userChoice==="paper" && computerChoice==='scissor')||
+            (userChoice==="scissor" && computerChoice==='rock')) {
+                result = "loss😒"
+            }
+            else {
+                result = "Win😎"
+            }
+            document.getElementById("result").innerText = result;
+        }
+            */
+
+    /* // INCREMENT / DECREMENT /RESET OPERATION
+        var count = 0;
+          document.getElementById('inc').addEventListener('click',()=>{
+            count+=1;
+            document.getElementById('num').innerText=count;
+          })
+          document.getElementById('dec').addEventListener('click',()=>{
+            count-=1;
+            document.getElementById('num').innerText=count;
+          })
+          document.getElementById('reset').addEventListener('click',()=>{
+            count=0;
+            document.getElementById('num').innerText=count;
+          })
+*/
+// TO ENTER NAME
+
+          //document.getElementById("submit").addEventListener("click",()=>{
+            //var text = document.getElementById("inp").value;
+            //document.getElementById("name").innerText=text;
+          //})
+
+           //var submitted = ()=> {
+            //alert("Hiii")
+           //}
+
+       // var li = document.createElement("li");
+        //li.innerText="One";
+        //document.getElementById("List").append(li);
+       // document.getElementById("Submit").addEventListener("click",()=> {
+       //     document.getElementById("msg").innerText="Hello World!!"
+       // })
+        //document.getElementById('msg').innerText = "Hello"
+       // document.getElementById('msg').innerHTML = "<p>Hello</p>"
+        /*
+        document.getElementById('msg').style.color="Red"
+        var item = document.getElementsByClassName('item');
+        item[0].style.color="Green"
+         document.querySelector('#item').style.backgroundColor="blue" //id
+         document.querySelector('.list').style.backgroundColor="blue"   //class
+        document.querySelector('p').style.backgroundColor="blue"  //tag
+        */
+    </script>
+     </body>
+</html>
